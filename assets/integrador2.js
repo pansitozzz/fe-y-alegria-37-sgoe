@@ -1,5 +1,10 @@
 (()=>{"use strict";
 const all=Array.isArray(window.PROCESSES)?window.PROCESSES:[];
+const menuBtn=document.querySelector(".menu-btn");
+const navLinks=document.querySelector(".nav-links");
+menuBtn?.addEventListener("click",()=>{const open=navLinks.classList.toggle("open");menuBtn.setAttribute("aria-expanded",String(open));menuBtn.setAttribute("aria-label",open?"Cerrar menú":"Abrir menú")});
+navLinks?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{navLinks.classList.remove("open");menuBtn?.setAttribute("aria-expanded","false");menuBtn?.setAttribute("aria-label","Abrir menú")}));
+
 const category={E:"Estratégico",M:"Misional",S:"Soporte"};
 const phaseLabels={P:"Planear",H:"Hacer",V:"Verificar",A:"Actuar"};
 const esc=(s)=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -11,8 +16,12 @@ for(const t of ["E","M","S"])byId("map"+t).innerHTML=all.filter(p=>p.type===t).m
 byId("inventoryBody").innerHTML=all.map(p=>'<tr><td>'+codeBadge(p)+'</td><td><strong class="type-'+esc(p.type)+'">'+esc(category[p.type])+'</strong></td><td>'+esc(p.name)+'</td><td>'+esc(p.leader)+'</td><td><button class="mini-link" type="button" data-open="'+esc(p.code)+'">Consultar</button></td></tr>').join("");
 const cards=byId("processCards");
 function renderCards(filter="all"){
-const list=all.filter(p=>filter==="all"||p.type===filter);
-cards.innerHTML=list.map(p=>'<article class="process-card" id="card-'+esc(p.code)+'"><div class="card-top">'+codeBadge(p)+'<span class="card-type type-'+esc(p.type)+'">'+esc(category[p.type])+'</span></div><h3>'+esc(p.name)+'</h3><p><strong>Responsable:</strong> '+esc(p.leader)+'</p><p>'+esc(p.goal)+'</p><button type="button" class="open-card" data-open="'+esc(p.code)+'">Ver ficha completa →</button></article>').join("");
+const groups=(filter==="all"?["E","M","S"]:[filter]).filter(t=>["E","M","S"].includes(t));
+cards.innerHTML=groups.map(t=>{
+  const items=all.filter(p=>p.type===t);
+  const title={E:"Procesos estratégicos",M:"Procesos misionales",S:"Procesos de soporte"}[t];
+  return '<section class="process-group" id="grupo-'+t+'"><div class="group-head"><h3>'+esc(title)+'</h3><span>'+items.length+' fichas</span></div><div class="group-cards">'+items.map(p=>'<article class="process-card" id="card-'+esc(p.code)+'"><div class="card-top">'+codeBadge(p)+'<span class="card-type type-'+esc(p.type)+'">'+esc(category[p.type])+'</span></div><h3>'+esc(p.name)+'</h3><p><strong>Responsable:</strong> '+esc(p.leader)+'</p><button type="button" class="open-card" data-open="'+esc(p.code)+'">Abrir ficha completa →</button></article>').join("")+'</div></section>';
+}).join("");
 }
 function detailBlock(label,text){return '<article class="detail-block"><h5>'+esc(label)+'</h5><p>'+esc(text)+'</p></article>'}
 function info(label,value,full=false){return '<div class="info-pill'+(full?' full':'')+'"><b>'+esc(label)+'</b>'+esc(value)+'</div>'}
@@ -46,6 +55,7 @@ detail.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: redu
 function closeDetail(){byId("detalle").hidden=true;history.replaceState(null,"","#fichas");byId("fichas").scrollIntoView({behavior:"smooth",block:"start"})}
 document.addEventListener("click",e=>{const open=e.target.closest("[data-open]");if(open){e.preventDefault();showProcess(open.dataset.open);return}const filter=e.target.closest("[data-filter]");if(filter){const value=filter.dataset.filter;document.querySelectorAll(".filter").forEach(b=>{const active=b.dataset.filter===value;b.classList.toggle("selected",active);b.setAttribute("aria-pressed",String(active))});renderCards(value);byId("detalle").hidden=true;}});
 byId("closeDetail").addEventListener("click",closeDetail);
+byId("returnFichas")?.addEventListener("click",e=>{e.preventDefault();closeDetail()});
 renderCards();
 if(/^#(E0[12]|M0[1-4]|S0[1-4])$/.test(location.hash)){const target=location.hash.slice(1);requestAnimationFrame(()=>showProcess(target,false))}
 })();
