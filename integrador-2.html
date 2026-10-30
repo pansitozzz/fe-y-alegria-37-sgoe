@@ -4,46 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Trabajo Integrador 2, semana 08: inventario, mapa de procesos y fichas de caracterización de la I.E. Fe y Alegría N.° 37.">
-  <meta name="theme-color" content="#0d2040">
+  <meta name="theme-color" content="#08080c">
   <title>Trabajo Integrador 2 · Fe y Alegría 37 · SGOE</title>
   <link rel="stylesheet" href="assets/integrador2.css">
   <script defer src="assets/integrador2-data-a.js"></script>
   <script defer src="assets/integrador2-data-b.js"></script>
   <script defer src="assets/integrador2.js"></script>
 </head>
-<body>
+<body class="integrador-two">
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div><div class="ambient ambient-c"></div>
   <a class="skip-link" href="#contenido">Ir al contenido</a>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="wordmark" href="index.html"><span class="brand-symbol" aria-hidden="true">♥</span><span><strong>Fe y Alegría 37</strong><small>SGOE · Maestría · 2026</small></span></a>
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="index.html">Integrador 1</a><a class="active" href="#inicio" aria-current="page">Integrador 2</a>
-        <a href="#mapa">Mapa</a><a href="#fichas">Fichas</a><a href="#fuentes">Fuentes</a>
-      </nav>
-    </div>
+  <header class="site-header" id="top">
+    <nav class="nav glass" aria-label="Navegación principal">
+      <a class="brand" href="index.html#inicio" aria-label="Inicio del sitio SGOE">
+        <span class="brand-mark" aria-hidden="true">♥</span>
+        <span><strong>Fe y Alegría 37</strong><small>SGOE · 2026</small></span>
+      </a>
+      <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navegacion">☰</button>
+      <div class="nav-links" id="navegacion">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#ruta">Semana 04 · Diagnóstico</a>
+        <a class="active" href="#inicio" aria-current="page">Semana 08 · Procesos</a>
+        <a href="#inventario">Inventario</a>
+        <a href="#mapa">Mapa de procesos</a>
+        <a href="#fichas">Fichas</a>
+        <a href="#fuentes">Fuentes</a>
+      </div>
+    </nav>
   </header>
   <main id="contenido">
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow"><span class="pulse"></span> Trabajo Integrador 2 · Semana 08</div>
-          <h1>Mapa de procesos y <em>fichas de caracterización</em></h1>
-          <p class="lead">Propuesta académica de gestión por procesos para la <strong>Institución Educativa Fe y Alegría N.° 37</strong>, en Educación Básica Regular. Del diagnóstico institucional a la mejora continua, con la identificación de responsables, entradas, actividades, resultados e indicadores.</p>
-          <div class="hero-actions"><a class="btn solid" href="#mapa">Explorar el mapa</a><a class="btn outline" href="#fichas">Consultar las 10 fichas</a></div>
-          <p class="disclaimer">Propuesta elaborada para fines académicos. Responsables, indicadores y metas sujetos a validación institucional; las fichas están pendientes de aprobación.</p>
+    <section class="hero section t2-hero" id="inicio">
+      <div class="hero-photo" aria-hidden="true"></div><div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content wrap">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Trabajo integrador 2 · Semana 08</span>
+          <h1>Del diagnóstico al <span>mapa de procesos</span></h1>
+          <p class="lead">Continuamos el sistema de gestión educativa de la I.E. Fe y Alegría N.° 37. A partir de las necesidades y partes interesadas identificadas en la Semana 04, caracterizamos cómo se organiza y mejora el servicio educativo.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#inventario">01 · Inventario</a>
+            <a class="btn ghost" href="#mapa">02 · Mapa de procesos</a>
+            <a class="btn ghost" href="#fichas">03 · Fichas completas</a>
+          </div>
+          <p class="t2-hero-note">Propuesta académica sujeta a validación institucional. Las fichas no acreditan aprobación ni certificación ISO.</p>
         </div>
-        <div class="hero-graphic" aria-label="Tres categorías de procesos: estratégicos, misionales y soporte">
-          <div class="floating-card floater-one"><span>01</span> Estrategia <strong>Dirección y mejora</strong></div>
-          <div class="floating-card floater-two"><span>02</span> Misión <strong>Aprendizaje y bienestar</strong></div>
-          <div class="floating-card floater-three"><span>03</span> Soporte <strong>Condiciones del servicio</strong></div>
-          <div class="graphic-center"><div class="heart">♥</div><strong>10</strong><span>procesos</span></div>
-        </div>
+        <aside class="hero-card glass reveal delay-1" aria-label="Continuidad del trabajo">
+          <div class="hero-card-top"><div class="mini-logo">37</div><div><strong>Un solo proyecto SGOE</strong><span>Progresión académica del sistema</span></div></div>
+          <div class="t2-continuity">
+            <a class="t2-step" href="index.html#ruta"><b>SEMANA 04</b><strong>Diagnóstico del sistema</strong><small>Organización, necesidades, interesados y mapa general</small></a>
+            <div class="t2-connector" aria-hidden="true">↓</div>
+            <div class="t2-step current"><b>SEMANA 08</b><strong>Caracterización de procesos</strong><small>Inventario, mapa de nivel 0 y diez fichas PHVA</small></div>
+          </div>
+          <a class="t2-backlink" href="index.html#procesos">← Revisar el mapa general previo</a>
+        </aside>
       </div>
-      <div class="container stats" aria-label="Inventario de procesos">
-        <div><strong>02</strong><span>Estratégicos</span></div><div><strong>04</strong><span>Misionales</span></div><div><strong>04</strong><span>Soporte</span></div><div><strong>10</strong><span>Fichas individuales</span></div>
-      </div>
+      <a class="scroll-cue" href="#recorrido" aria-label="Continuar al recorrido">⌄</a>
     </section>
-
+    <nav class="t2-jumps wrap glass" id="recorrido" aria-label="Accesos directos de la Semana 08">
+      <span class="t2-jump-label">Accesos directos</span>
+      <a href="#contexto">Contexto</a><a href="#inventario">Inventario</a><a href="#mapa">Mapa</a><a href="#fichas">10 fichas</a><a href="#implementacion">Aplicación</a><a href="#fuentes">Fuentes</a>
+    </nav>
     <section class="section container" id="contexto">
       <div class="section-intro"><span class="overline">01 · Contexto y criterios de selección</span><h2>Gestión orientada al servicio educativo</h2><p>Fe y Alegría promueve educación popular, formación integral y compromiso con comunidades vulnerables. El inventario recoge diez procesos de nivel 0, con un resultado identificable y un responsable propuesto para cada uno; la cantidad de procesos es una decisión de diseño académico y no una exigencia universal.</p></div>
       <div class="context-grid">
@@ -53,9 +72,14 @@
       </div>
     </section>
 
+    <section class="section container" id="inventario">
+      <div class="section-intro"><span class="overline">02 · Inventario institucional</span><h2>Diez procesos, tres categorías</h2><p>Fecha del inventario: <strong>26 de octubre de 2026</strong>. Los códigos E, M y S son identificadores internos de esta propuesta, no códigos oficiales del MINEDU.</p></div>
+      <div class="table-wrap"><table><thead><tr><th>Código</th><th>Clasificación</th><th>Proceso</th><th>Responsable propuesto</th><th>Ficha</th></tr></thead><tbody id="inventoryBody"></tbody></table></div>
+    </section>
+
     <section class="section shaded" id="mapa">
       <div class="container">
-        <div class="section-intro"><span class="overline">02 · Mapa de procesos de nivel 0</span><h2>Un sistema conectado, de las necesidades a los resultados</h2><p>Selecciona cualquier proceso para consultar su ficha de caracterización. El mapa representa exactamente los diez códigos del inventario.</p></div>
+        <div class="section-intro"><span class="overline">03 · Mapa de procesos de nivel 0</span><h2>Un sistema conectado, de las necesidades a los resultados</h2><p>Selecciona cualquier proceso para consultar su ficha de caracterización. El mapa representa exactamente los diez códigos del inventario.</p></div>
         <div class="process-map" role="group" aria-label="Mapa interactivo de procesos de nivel 0">
           <div class="map-side map-input"><span>ENTRADAS</span><p>Necesidades de estudiantes y familias</p><p>Contexto y requisitos</p><p>Recursos disponibles</p></div>
           <div class="map-center">
@@ -71,25 +95,21 @@
       </div>
     </section>
 
-    <section class="section container" id="inventario">
-      <div class="section-intro"><span class="overline">03 · Inventario institucional</span><h2>Diez procesos, tres categorías</h2><p>Fecha del inventario: <strong>26 de octubre de 2026</strong>. Los códigos E, M y S son identificadores internos de esta propuesta, no códigos oficiales del MINEDU.</p></div>
-      <div class="table-wrap"><table><thead><tr><th>Código</th><th>Clasificación</th><th>Proceso</th><th>Responsable propuesto</th><th>Ficha</th></tr></thead><tbody id="inventoryBody"></tbody></table></div>
-    </section>
-
     <section class="section shaded" id="fichas">
       <div class="container">
-        <div class="section-intro"><span class="overline">04 · Fichas de caracterización completas</span><h2>Conoce cómo funciona cada proceso</h2><p>Las fichas siguen la estructura del trabajo de la sesión 8: responsable, objetivo, alcance, ciclo PHVA, requisitos, recursos, indicador, riesgos, seguimiento y acciones de aplicación cuando corresponda.</p></div>
+        <div class="section-intro"><span class="overline">04 · Fichas de caracterización completas</span><h2>Conoce cómo funciona cada proceso</h2><p>Selecciona una categoría y abre la ficha correspondiente. Las fichas siguen la estructura del trabajo de la sesión 8: responsable, objetivo, alcance, ciclo PHVA, requisitos, recursos, indicador, riesgos, seguimiento y acciones de aplicación cuando corresponda.</p></div>
         <div class="filters" role="group" aria-label="Filtrar fichas">
           <button type="button" class="filter selected" data-filter="all" aria-pressed="true">Todos <span>10</span></button>
           <button type="button" class="filter" data-filter="E" aria-pressed="false">Estratégicos <span>2</span></button>
           <button type="button" class="filter" data-filter="M" aria-pressed="false">Misionales <span>4</span></button>
           <button type="button" class="filter" data-filter="S" aria-pressed="false">Soporte <span>4</span></button>
         </div>
-        <div class="cards" id="processCards"></div>
         <div class="detail-panel" id="detalle" hidden aria-live="polite">
           <div class="detail-top"><div><span class="overline" id="detailCategory"></span><h3 id="detailTitle"></h3><p id="detailMeta"></p></div><button type="button" class="close-detail" id="closeDetail" aria-label="Cerrar ficha">×</button></div>
           <div id="detailContent"></div>
+          <a class="t2-backlink" href="#fichas" id="returnFichas">↑ Volver a la selección de fichas</a>
         </div>
+        <div class="cards" id="processCards"></div>
       </div>
     </section>
 
@@ -112,6 +132,12 @@
       </div>
     </section>
   </main>
-  <footer><div class="container footer-inner"><div><strong>Universidad Privada San Juan Bautista · Escuela de Posgrado</strong><p>Maestría en Gestión Educativa y Sistemas Integrados de Calidad · Ciclo II</p><p>Trabajo integrador grupal N.° 2 · Grupo N.° 3 · Dra. Leny Bravo Luna</p></div><div><strong>Integrantes</strong><p>Verónica Nieto Narciso · Gladys Patricia Coila Mamani<br>Leydi Chaiña Dueñas · Víctor Ricardo Medina Lima</p><a href="index.html">← Volver al Trabajo Integrador 1</a></div></div></footer>
+  <footer>
+    <div class="wrap footer-inner">
+      <span>SGOE · I.E. Fe y Alegría N.° 37 · UPSJB · Grupo N.° 3</span>
+      <span>Trabajo Integrador 2 · Dra. Leny Bravo Luna · 2026</span>
+    </div>
+    <div class="wrap t2-credits">Verónica Nieto Narciso · Gladys Patricia Coila Mamani · Leydi Chaiña Dueñas · Víctor Ricardo Medina Lima</div>
+  </footer>
 </body>
 </html>
