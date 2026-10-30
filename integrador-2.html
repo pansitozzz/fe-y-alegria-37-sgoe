@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Trabajo Integrador 2, semana 08: inventario, mapa de procesos y fichas de caracterización de la I.E. Fe y Alegría N.° 37.">
+  <meta name="theme-color" content="#0d2040">
+  <title>Trabajo Integrador 2 · Fe y Alegría 37 · SGOE</title>
+  <link rel="stylesheet" href="assets/integrador2.css">
+  <script defer src="assets/integrador2.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="wordmark" href="index.html"><span class="brand-symbol" aria-hidden="true">♥</span><span><strong>Fe y Alegría 37</strong><small>SGOE · Maestría · 2026</small></span></a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Integrador 1</a><a class="active" href="#inicio" aria-current="page">Integrador 2</a>
+        <a href="#mapa">Mapa</a><a href="#fichas">Fichas</a><a href="#fuentes">Fuentes</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="pulse"></span> Trabajo Integrador 2 · Semana 08</div>
+          <h1>Mapa de procesos y <em>fichas de caracterización</em></h1>
+          <p class="lead">Propuesta académica de gestión por procesos para la <strong>Institución Educativa Fe y Alegría N.° 37</strong>, en Educación Básica Regular. Del diagnóstico institucional a la mejora continua, con la identificación de responsables, entradas, actividades, resultados e indicadores.</p>
+          <div class="hero-actions"><a class="btn solid" href="#mapa">Explorar el mapa</a><a class="btn outline" href="#fichas">Consultar las 10 fichas</a></div>
+          <p class="disclaimer">Propuesta elaborada para fines académicos. Responsables, indicadores y metas sujetos a validación institucional; las fichas están pendientes de aprobación.</p>
+        </div>
+        <div class="hero-graphic" aria-label="Tres categorías de procesos: estratégicos, misionales y soporte">
+          <div class="floating-card floater-one"><span>01</span> Estrategia <strong>Dirección y mejora</strong></div>
+          <div class="floating-card floater-two"><span>02</span> Misión <strong>Aprendizaje y bienestar</strong></div>
+          <div class="floating-card floater-three"><span>03</span> Soporte <strong>Condiciones del servicio</strong></div>
+          <div class="graphic-center"><div class="heart">♥</div><strong>10</strong><span>procesos</span></div>
+        </div>
+      </div>
+      <div class="container stats" aria-label="Inventario de procesos">
+        <div><strong>02</strong><span>Estratégicos</span></div><div><strong>04</strong><span>Misionales</span></div><div><strong>04</strong><span>Soporte</span></div><div><strong>10</strong><span>Fichas individuales</span></div>
+      </div>
+    </section>
+
+    <section class="section container" id="contexto">
+      <div class="section-intro"><span class="overline">01 · Contexto y criterios de selección</span><h2>Gestión orientada al servicio educativo</h2><p>Fe y Alegría promueve educación popular, formación integral y compromiso con comunidades vulnerables. El inventario recoge diez procesos de nivel 0, con un resultado identificable y un responsable propuesto para cada uno; la cantidad de procesos es una decisión de diseño académico y no una exigencia universal.</p></div>
+      <div class="context-grid">
+        <article class="context-card"><span class="context-icon">✦</span><h3>Necesidades atendidas</h3><p>Acceso y permanencia, aprendizaje e inclusión, protección estudiantil, orientación a familias, acompañamiento al personal y rendición de cuentas.</p></article>
+        <article class="context-card"><span class="context-icon">↗</span><h3>Lógica de procesos</h3><p>Necesidades y recursos ingresan al sistema; los procesos estratégicos orientan, los misionales prestan el servicio y los de soporte lo hacen posible.</p></article>
+        <article class="context-card"><span class="context-icon">↻</span><h3>Mejora continua</h3><p>Los resultados alimentan E02, que evalúa evidencias y propone acciones de mejora, y E01, que revisa el direccionamiento institucional.</p></article>
+      </div>
+    </section>
+
+    <section class="section shaded" id="mapa">
+      <div class="container">
+        <div class="section-intro"><span class="overline">02 · Mapa de procesos de nivel 0</span><h2>Un sistema conectado, de las necesidades a los resultados</h2><p>Selecciona cualquier proceso para consultar su ficha de caracterización. El mapa representa exactamente los diez códigos del inventario.</p></div>
+        <div class="process-map" role="group" aria-label="Mapa interactivo de procesos de nivel 0">
+          <div class="map-side map-input"><span>ENTRADAS</span><p>Necesidades de estudiantes y familias</p><p>Contexto y requisitos</p><p>Recursos disponibles</p></div>
+          <div class="map-center">
+            <section class="map-band band-e" aria-label="Procesos estratégicos"><div class="band-heading"><span>ESTRATÉGICOS</span><small>Orientan y evalúan el servicio</small></div><div class="map-nodes" id="mapE"></div></section>
+            <div class="down-arrow" aria-hidden="true">↓</div>
+            <section class="map-band band-m" aria-label="Procesos misionales"><div class="band-heading"><span>MISIONALES</span><small>Generan valor educativo</small></div><div class="map-nodes two-cols" id="mapM"></div></section>
+            <div class="down-arrow" aria-hidden="true">↑</div>
+            <section class="map-band band-s" aria-label="Procesos de soporte"><div class="band-heading"><span>SOPORTE</span><small>Proveen medios y condiciones</small></div><div class="map-nodes two-cols" id="mapS"></div></section>
+          </div>
+          <div class="map-side map-output"><span>RESULTADOS</span><p>Aprendizajes y progreso</p><p>Bienestar y convivencia</p><p>Continuidad escolar</p><p>Satisfacción de estudiantes y familias</p></div>
+        </div>
+        <p class="map-feedback"><span aria-hidden="true">↻</span> Retroalimentación: los resultados de todos los procesos se revisan en <a href="#E02" data-open="E02">E02</a> para acordar mejoras y ajustes de <a href="#E01" data-open="E01">E01</a>.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="inventario">
+      <div class="section-intro"><span class="overline">03 · Inventario institucional</span><h2>Diez procesos, tres categorías</h2><p>Fecha del inventario: <strong>26 de octubre de 2026</strong>. Los códigos E, M y S son identificadores internos de esta propuesta, no códigos oficiales del MINEDU.</p></div>
+      <div class="table-wrap"><table><thead><tr><th>Código</th><th>Clasificación</th><th>Proceso</th><th>Responsable propuesto</th><th>Ficha</th></tr></thead><tbody id="inventoryBody"></tbody></table></div>
+    </section>
+
+    <section class="section shaded" id="fichas">
+      <div class="container">
+        <div class="section-intro"><span class="overline">04 · Fichas de caracterización completas</span><h2>Conoce cómo funciona cada proceso</h2><p>Las fichas siguen la estructura del trabajo de la sesión 8: responsable, objetivo, alcance, ciclo PHVA, requisitos, recursos, indicador, riesgos, seguimiento y acciones de aplicación cuando corresponda.</p></div>
+        <div class="filters" role="group" aria-label="Filtrar fichas">
+          <button type="button" class="filter selected" data-filter="all" aria-pressed="true">Todos <span>10</span></button>
+          <button type="button" class="filter" data-filter="E" aria-pressed="false">Estratégicos <span>2</span></button>
+          <button type="button" class="filter" data-filter="M" aria-pressed="false">Misionales <span>4</span></button>
+          <button type="button" class="filter" data-filter="S" aria-pressed="false">Soporte <span>4</span></button>
+        </div>
+        <div class="cards" id="processCards"></div>
+        <div class="detail-panel" id="detalle" hidden aria-live="polite">
+          <div class="detail-top"><div><span class="overline" id="detailCategory"></span><h3 id="detailTitle"></h3><p id="detailMeta"></p></div><button type="button" class="close-detail" id="closeDetail" aria-label="Cerrar ficha">×</button></div>
+          <div id="detailContent"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="implementacion">
+      <div class="section-intro"><span class="overline">05 · Aplicación y coherencia</span><h2>De la caracterización al seguimiento</h2><p>Este apartado resume la puesta en práctica propuesta en la ficha E01 y el control de coherencia de E02.</p></div>
+      <div class="timeline"><article><b>Semana 1</b><p>Validar los diez procesos y asignar responsables.</p></article><article><b>Semana 2</b><p>Revisar las fichas y los formatos con la institución.</p></article><article><b>Semanas 3 y 4</b><p>Recoger datos iniciales y validar las metas propuestas.</p></article><article><b>Cada periodo lectivo</b><p>Evaluar resultados y mejoras mediante E02; ajustar planes y procesos.</p></article></div>
+      <div class="validation"><strong>Comprobación de coherencia:</strong> 2 procesos estratégicos (E01 y E02) + 4 misionales (M01 a M04) + 4 de soporte (S01 a S04) = <strong>10 procesos, 10 fichas y 10 nodos en el mapa.</strong> Las actividades PHVA no constituyen procesos adicionales.</div>
+    </section>
+
+    <section class="section shaded" id="fuentes">
+      <div class="container">
+        <div class="section-intro"><span class="overline">06 · Fuentes y alcance</span><h2>Referencias de consulta</h2><p>Se consignan las fuentes del trabajo integrador de la sesión 8, con fines de sustentación académica.</p></div>
+        <div class="references">
+          <a href="https://feyalegria.org.pe/quienes-somos/" target="_blank" rel="noopener noreferrer">Fe y Alegría del Perú · Quiénes somos <span>↗</span></a>
+          <a href="https://repositorio.minedu.gob.pe/handle/20.500.12799/4551" target="_blank" rel="noopener noreferrer">MINEDU · Currículo Nacional de la Educación Básica <span>↗</span></a>
+          <a href="https://www.minedu.gob.pe/transparencia/2021/pdf/RSG_075-2021-MINEDU.pdf" target="_blank" rel="noopener noreferrer">MINEDU · Mapa de procesos y fichas institucionales (RSG 075-2021) <span>↗</span></a>
+          <a href="https://www.minedu.gob.pe/pdf/proyecto-educativo-institucional.pdf" target="_blank" rel="noopener noreferrer">MINEDU · Guía para formular e implementar el PEI <span>↗</span></a>
+        </div>
+        <p class="source-note">También se consideraron los materiales del curso SGOE (sesiones 1–7) y las indicaciones y modelo del Trabajo Integrador 2. La ubicación, niveles atendidos y denominaciones de cargos deben confirmarse con la institución. Este sitio <strong>no acredita certificación ISO ni aprobación institucional</strong>.</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><div><strong>Universidad Privada San Juan Bautista · Escuela de Posgrado</strong><p>Maestría en Gestión Educativa y Sistemas Integrados de Calidad · Ciclo II</p><p>Trabajo integrador grupal N.° 2 · Grupo N.° 3 · Dra. Leny Bravo Luna</p></div><div><strong>Integrantes</strong><p>Verónica Nieto Narciso · Gladys Patricia Coila Mamani<br>Leydi Chaiña Dueñas · Víctor Ricardo Medina Lima</p><a href="index.html">← Volver al Trabajo Integrador 1</a></div></div></footer>
+</body>
+</html>
