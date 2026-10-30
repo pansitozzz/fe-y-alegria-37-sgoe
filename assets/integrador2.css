@@ -152,3 +152,14 @@
  .integrador-two .t2-hero .hero-content{padding-top:115px;padding-bottom:90px}
 }
 @media(prefers-reduced-motion:reduce){.integrador-two *{scroll-behavior:auto!important;transition:none!important}}
+/* Índice de fichas ordenado por tipos, sin repetir objetivos en diez tarjetas densas */
+.integrador-two .cards{display:block}
+.integrador-two .process-group{margin:0 0 25px}
+.integrador-two .group-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 12px;padding:0 3px}
+.integrador-two .group-head h3{font-size:21px;margin:0}
+.integrador-two .group-head span{font-size:12px;color:var(--muted)}
+.integrador-two .group-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.integrador-two .process-group:nth-child(1) .group-head h3{color:#9bcbff}
+.integrador-two .process-group:nth-child(2) .group-head h3{color:#ff9da6}
+.integrador-two .process-group:nth-child(3) .group-head h3{color:#93e4c0}
+@media(max-width:640px){.integrador-two .group-cards{grid-template-columns:1fr}}
