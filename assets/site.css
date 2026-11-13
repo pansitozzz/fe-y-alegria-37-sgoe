@@ -341,3 +341,95 @@ tbody tr:hover{background:rgba(255,255,255,.025)}
  .reveal{opacity:1;transform:none;transition:none}
  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
 }
+
+/* Semana 11 · Procedimiento M01 — MISMA hoja, tokens y componentes visuales del SGOE */
+.week11 .week11-note,.week11 .week11-outcome,.week11 .week11-source-note{
+  background:var(--accent-soft);border:1px solid rgba(239,64,86,.22);
+  border-radius:14px;padding:18px 21px;color:#f0d9dd;font-size:13px;line-height:1.75
+}
+.week11 .week11-note{margin-top:20px}
+.week11 .week11-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.week11 .week11-info-box{padding:24px;border:1px solid var(--line);border-radius:18px;
+ background:linear-gradient(135deg,rgba(255,255,255,.085),rgba(255,255,255,.03));box-shadow:var(--shadow)}
+.week11 .week11-info-box span,.week11 .week11-metric span,.week11 .week11-trace span{
+ display:block;color:var(--accent-light);font-size:11px;font-weight:850;letter-spacing:.09em;text-transform:uppercase;margin-bottom:11px}
+.week11 .week11-info-box strong{display:block;font-size:19px;line-height:1.35;margin-bottom:10px}
+.week11 .week11-info-box p{color:var(--muted);font-size:13px;margin:0}
+.week11 .week11-info-box.week11-span{grid-column:1/-1}
+.week11 .week11-steps{display:grid;gap:13px}
+.week11 .week11-step{display:grid;grid-template-columns:58px 1fr;gap:20px;align-items:flex-start;
+ padding:23px;border-radius:18px;border:1px solid var(--line);
+ background:linear-gradient(135deg,rgba(255,255,255,.085),rgba(255,255,255,.03))}
+.week11 .week11-step-no{display:grid;place-items:center;width:52px;height:52px;
+ border-radius:14px;background:var(--accent-soft);color:var(--accent-light);
+ border:1px solid rgba(239,64,86,.25);font-weight:900;font-size:17px}
+.week11 .week11-step h3{font-size:20px;margin:3px 0 9px}
+.week11 .week11-step p{font-size:13px;color:var(--muted);margin:0}
+.week11 .week11-step-meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+.week11 .week11-step-meta span{font-size:11px;color:#dce0e7;padding:8px 11px;
+ border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.04)}
+.week11 .week11-step-meta b{color:#fff}
+.week11 .week11-decision{border-color:rgba(239,64,86,.3);background:linear-gradient(135deg,rgba(239,64,86,.11),rgba(255,255,255,.035))}
+.week11 .week11-branches{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.week11 .week11-branches>div{border:1px solid var(--line);border-radius:12px;padding:15px;background:rgba(6,10,16,.28)}
+.week11 .week11-branches b{font-size:11px;display:block;color:var(--accent-light);margin-bottom:7px}
+.week11 .week11-branches p{font-size:12px}
+.week11 .week11-flow{border-radius:24px;padding:32px 22px;display:flex;flex-direction:column;align-items:center}
+.week11 .week11-flow-node{width:min(100%,490px);border-radius:12px;padding:14px 17px;
+ border:1px solid var(--line);background:rgba(12,15,24,.8);font-weight:750;font-size:13px;text-align:center;color:#f7f7fa}
+.week11 .week11-terminal{border-radius:100px;border-color:rgba(239,64,86,.36);background:var(--accent-soft)}
+.week11 .week11-flow-question{border-color:rgba(239,64,86,.58);background:rgba(239,64,86,.105)}
+.week11 .week11-flow-question>span{color:var(--accent-light);font-size:19px;vertical-align:middle;margin-right:5px}
+.week11 .week11-arrow{color:var(--accent-light);font-size:22px;font-weight:850;line-height:1.45;text-align:center}
+.week11 .week11-flow-fork{display:grid;grid-template-columns:1fr 1fr;gap:30px;width:min(100%,850px);margin:15px auto}
+.week11 .week11-flow-path{display:flex;flex-direction:column;align-items:center;min-width:0;gap:5px}
+.week11 .week11-flow-path .week11-flow-node{width:100%;font-size:12px}
+.week11 .week11-flow-path .week11-terminal{max-width:100%}
+.week11 .week11-route-label{color:var(--accent-light);border:1px solid rgba(239,64,86,.3);
+ background:var(--accent-soft);padding:4px 13px;border-radius:100px;font-size:10px;font-weight:900;letter-spacing:.13em}
+.week11 .week11-flow-branch{color:#e2dfe5}
+.week11 .week11-flow-branch strong{color:var(--accent-light)}
+.week11 .week11-flow-continuation{max-width:750px;text-align:center;
+ border:1px dashed rgba(239,64,86,.3);padding:11px 20px;border-radius:12px;margin:7px auto 15px;color:var(--muted);font-size:12px}
+.week11 .week11-flow-continuation>span{display:block;color:var(--accent-light);font-size:21px;line-height:1.3}
+.week11 .week11-flow-caption{max-width:850px;font-size:11px;line-height:1.75;
+ border-top:1px solid var(--line);color:var(--muted);padding-top:18px;margin:20px 0 0;text-align:center}
+.week11 .week11-table td:first-child{font-weight:800;color:#f6f7f9}
+.week11 .week11-table th{white-space:normal}
+.week11 .week11-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.week11 .week11-metric{border:1px solid var(--line);border-radius:17px;padding:22px;background:rgba(255,255,255,.055)}
+.week11 .week11-metric strong{display:block;font-size:19px;line-height:1.3;margin:6px 0 11px}
+.week11 .week11-metric p{font-size:12px;color:var(--muted);margin:0}
+.week11 .week11-controls{margin-top:24px}
+.week11 .week11-controls h3{font-size:21px;margin-bottom:14px}
+.week11 .week11-outcome{margin-top:17px}
+.week11 .week11-trace-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.week11 .week11-trace{padding:23px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.055)}
+.week11 .week11-trace h3{font-size:20px;margin:0 0 9px}
+.week11 .week11-trace p{font-size:12px;color:var(--muted);margin:0}
+.week11 .week11-doc-control{margin-top:21px;padding:23px;border-radius:18px}
+.week11 .week11-doc-control h3{font-size:21px;margin-bottom:15px}
+.week11 .week11-doc-control>p{font-size:13px;color:var(--muted);margin:17px 0 0}
+.week11 .week11-references{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.week11 .week11-references article{border-radius:16px;background:rgba(255,255,255,.055);border:1px solid var(--line);padding:19px}
+.week11 .week11-references article b{display:block;color:#f7f7fa;font-size:14px;margin-bottom:9px}
+.week11 .week11-references article p{color:var(--muted);font-size:12px;margin:0}
+.week11 .week11-source-note{margin-top:17px}
+.landing .choose-grid.three-weeks{grid-template-columns:repeat(3,minmax(0,1fr))}
+.landing .choose-grid.three-weeks .choose-card{min-height:410px;padding:27px}
+.landing .choose-grid.three-weeks .choose-card h2{font-size:clamp(23px,2.5vw,31px)}
+@media(max-width:1000px){
+ .landing .choose-grid.three-weeks{grid-template-columns:1fr 1fr}
+ .week11 .week11-metrics,.week11 .week11-references{grid-template-columns:1fr}
+}
+@media(max-width:670px){
+ .landing .choose-grid.three-weeks{grid-template-columns:1fr}
+ .landing .choose-grid.three-weeks .choose-card{min-height:310px}
+ .week11 .week11-info-grid,.week11 .week11-trace-grid,.week11 .week11-branches,.week11 .week11-flow-fork{grid-template-columns:1fr}
+ .week11 .week11-step{grid-template-columns:43px 1fr;gap:13px;padding:15px}
+ .week11 .week11-step-no{width:40px;height:40px;font-size:13px;border-radius:11px}
+ .week11 .week11-step h3{font-size:17px}
+ .week11 .week11-flow{padding:23px 14px}
+ .week11 .week11-flow-fork{gap:10px}
+ .week11 .week11-flow-node{font-size:12px}
+}
